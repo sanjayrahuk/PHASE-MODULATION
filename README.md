@@ -1,4 +1,4 @@
-# EXPT.NO.8	Phase Modulation
+# EXPT.NO.7	Phase Modulation
 
 # Aim
 
