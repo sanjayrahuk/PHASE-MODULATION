@@ -1,6 +1,6 @@
-EXPT.NO.8	Phase Modulation
+# EXPT.NO.8	Phase Modulation
 
-Aim
+# Aim
 
 To implement and analyze phase modulation (PM) using Sci lab 
  Apparatus Required
@@ -11,8 +11,8 @@ Phase Modulation (PM) is a technique where the phase of the carrier wave is vari
 The general form of a PM signal can be represented as:
 
 
-Algorithm
-
+# Algorithm
+ 
 1.	Initialize Parameters:
 o	Set values for carrier amplitude (AcA_cAc), carrier frequency (fcf_cfc), message frequency (fmf_mfm), sampling frequency, and phase deviation sensitivity (kpk_pkp).
 2.	Generate Time Axis:
@@ -23,51 +23,35 @@ o	Define the message signal as a cosine wave.
 o	Apply the PM modulation formula to obtain the modulated signal.
 5.	Plot the Signals:
 o	Use Matplotlib to plot the message signal, carrier signal, and phase-modulated signal.
-CODE
-am=7.2;
 
-fm=465;
-
-ac=14.2;
-
-fc=4650;
-
-fs=46500;
-
-t=0:1/fs:3/fm;
-
-b=4.7;
-
-em=am*cos(2*3.14*fm*t);
-
+# CODE
+```
+Am=11.46;
+fm=1049;
+Ac=18.33;
+fc=10490 ;
+fs=104900;
+t=0:1/fs:2/fm;
+b=4.17;
+b=4.17;
+em=Am*cos(2*3.14*fm*t);
 subplot(4,1,1);
-
 plot(t,em);
-
-ec=ac*cos(2*3.14*fc*t);
-
+ec=Ac*cos(2*3.14*fc*t);
 subplot(4,1,2);
-
 plot(t,ec);
-
-efm = ac * cos((2*3.14*fc*t) + b * sin(2*3.14*fm*t));
-
+efm=Ac*cos(2*3.14*fc*t+b*sin(2*3.14*fm*t));
 subplot(4,1,3);
-
 plot(t,efm);
-
-epm= ac * cos((2*3.14*fc*t) + b * cos(2*3.14*fm*t));
-
+epm=Ac*cos(2*3.14*fc*t+b*cos(2*3.14*fm*t));
 subplot(4,1,4);
-
 plot(t,epm);
-OUTPUT 
-<img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/e76930ca-0266-47da-8988-3d16dc297179" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e91458fb-e316-4dd1-9465-03b6e7d05ca0" />
+```
+# output waveform:
 
-
+<img width="1919" height="1120" alt="image" src="https://github.com/user-attachments/assets/aa258cfa-810d-40b9-b325-99c0fdce3465" />
 
  
-Result
+# Result
 
 The message signal, carrier signal, and phase-modulated (PM) signal will be displayed in separate plots. The modulated signal will show phase variations corresponding to the amplitude of the message signal.
