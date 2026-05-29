@@ -16,7 +16,7 @@ The general form of a PM signal can be represented as:
 1.	Initialize Parameters:
 o	Set values for carrier amplitude (AcA_cAc), carrier frequency (fcf_cfc), message frequency (fmf_mfm), sampling frequency, and phase deviation sensitivity (kpk_pkp).
 2.	Generate Time Axis:
-o	Create a time vector for the signal duration based on the sampling frequency.
+o	Create  time vector for the signal duration based on the sampling frequency.
 3.	Generate Message Signal:
 o	Define the message signal as a cosine wave.
 4.	Generate PM Signal:
